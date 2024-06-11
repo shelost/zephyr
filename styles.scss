@@ -7,29 +7,76 @@ body{
 }
 
 
+button{
+    outline: none;
+    border: none;
+
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &.secondary{
+        background: white;
+        border: 1px solid #6355FF;
+        color: #6355FF;
+        &:hover{
+            background: rgba(#6355FF, 0.1);
+        }
+    }
+
+    &.primary{
+        background: #6355FF;
+        color: white;
+        &:hover{
+            background: #5200FF;
+        }
+    }
+}
+
+
+::selection{
+    background: #6355FF;
+    color: white;
+}
+
 .container {
-    resize: horizontal;
-    overflow-x: hidden;
-    padding: 10px 5px;
+    //resize: horizontal;
+    //overflow-x: hidden;
+
+    padding: 0;
     overflow-y: hidden;
-    height: 600px;
-    min-width: 410px;
-    max-width: calc(100vw - 400px);
+    height: 620px;
+    box-shadow: 0 50px 60px rgba(#020b3e, 0.15);
+
     flex-shrink: 0;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 
-    box-shadow: 0 50px 60px rgba(#020b3e, 0.15);
+
     flex-shrink: 0;
     background: rgba(white, 0.9);
 
     margin-bottom: 5px;
-    border-radius: 10px;
-    border: 10px solid rgba(white, 0.1);
-}
+    border-radius: 5px;
+    border: 2px solid rgba(white, 0.1);
 
+
+    &:first-child{
+        border-radius: 20px 20px 5px 5px !important;
+    }
+
+    &:last-child{
+        border-radius: 5px 5px 20px 20px !important;
+    }
+}
 
 ::-webkit-scrollbar{
     width: 20px;
@@ -48,9 +95,13 @@ body{
 }
 
 .grid-stack {
-    width: 400px;
+    min-width: 400px;
+    flex-grow: 1;
     height: 600px;
+    margin: 10px;
 }
+
+
 
 #main{
     display: flex;
@@ -68,6 +119,17 @@ body{
 
     overflow-y: scroll;
 
+
+
+
+    #screen{
+        resize: horizontal;
+        overflow-x: hidden;
+        flex-shrink: 0;
+        min-width: 420px;
+    max-width: calc(100vw - 400px);
+    box-shadow: 0 50px 60px rgba(#020b3e, 0.15);
+    }
 }
 
 #nav{
@@ -104,9 +166,10 @@ body{
             letter-spacing: -0.25px;
             font-size: 15px;
             font-weight: 600;
+            width: 250px;
             padding: 6px 8px 4px 8px;
             transition: 0.2s ease;
-            border-radius: 5px 5px 0 0;
+            border-radius: 3px 3px 0 0;
             background: rgba(#6355FF, 0.05);
             &:hover{
                 background: rgba(#6355FF, 0.1);
@@ -148,7 +211,7 @@ body{
         flex-wrap: wrap;
         gap: 20px;
         padding: 0px;
-        .add-page{
+        .add-btn{
             width: 80px;
             display: flex;
             flex-direction: column;
@@ -202,6 +265,7 @@ body{
     //border: 1.5px solid rgba(#6355ff, 0);
 
 
+
     .item{
         flex: 1;
     }
@@ -213,7 +277,7 @@ body{
         font-size: 14px;
         letter-spacing: -0.1px;
         font-weight: 400;
-        letter-spacing: -0.3px;
+        letter-spacing: -0.2px;
         border: none;
         background: none;
         background-color: none;

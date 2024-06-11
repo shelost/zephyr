@@ -5,24 +5,64 @@ body {
   background-image: linear-gradient(to left, black, rgba(99, 85, 255, 0)) !important;
 }
 
+button {
+  outline: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+button.secondary {
+  background: white;
+  border: 1px solid #6355FF;
+  color: #6355FF;
+}
+button.secondary:hover {
+  background: rgba(99, 85, 255, 0.1);
+}
+button.primary {
+  background: #6355FF;
+  color: white;
+}
+button.primary:hover {
+  background: #5200FF;
+}
+
+::-moz-selection {
+  background: #6355FF;
+  color: white;
+}
+
+::selection {
+  background: #6355FF;
+  color: white;
+}
+
 .container {
-  resize: horizontal;
-  overflow-x: hidden;
-  padding: 10px 5px;
+  padding: 0;
   overflow-y: hidden;
-  height: 600px;
-  min-width: 410px;
-  max-width: calc(100vw - 400px);
+  height: 620px;
+  box-shadow: 0 50px 60px rgba(2, 11, 62, 0.15);
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  box-shadow: 0 50px 60px rgba(2, 11, 62, 0.15);
+  align-items: stretch;
   flex-shrink: 0;
   background: rgba(255, 255, 255, 0.9);
   margin-bottom: 5px;
-  border-radius: 10px;
-  border: 10px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+.container:first-child {
+  border-radius: 20px 20px 5px 5px !important;
+}
+.container:last-child {
+  border-radius: 5px 5px 20px 20px !important;
 }
 
 ::-webkit-scrollbar {
@@ -43,8 +83,10 @@ body {
 }
 
 .grid-stack {
-  width: 400px;
+  min-width: 400px;
+  flex-grow: 1;
   height: 600px;
+  margin: 10px;
 }
 
 #main {
@@ -59,6 +101,14 @@ body {
   top: 44px;
   right: 0px;
   overflow-y: scroll;
+}
+#main #screen {
+  resize: horizontal;
+  overflow-x: hidden;
+  flex-shrink: 0;
+  min-width: 420px;
+  max-width: calc(100vw - 400px);
+  box-shadow: 0 50px 60px rgba(2, 11, 62, 0.15);
 }
 
 #nav {
@@ -91,9 +141,10 @@ body {
   letter-spacing: -0.25px;
   font-size: 15px;
   font-weight: 600;
+  width: 250px;
   padding: 6px 8px 4px 8px;
   transition: 0.2s ease;
-  border-radius: 5px 5px 0 0;
+  border-radius: 3px 3px 0 0;
   background: rgba(99, 85, 255, 0.05);
 }
 #nav #mast input:hover {
@@ -130,7 +181,7 @@ body {
   gap: 20px;
   padding: 0px;
 }
-#sidebar #buttons .add-page {
+#sidebar #buttons .add-btn {
   width: 80px;
   display: flex;
   flex-direction: column;
@@ -139,19 +190,19 @@ body {
   cursor: pointer;
   transition: 0.2s ease;
 }
-#sidebar #buttons .add-page img {
+#sidebar #buttons .add-btn img {
   width: 100%;
   border-radius: 5px;
   border: 1px solid white;
   transition: 0.2s ease;
 }
-#sidebar #buttons .add-page p {
+#sidebar #buttons .add-btn p {
   margin: 0;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: -0.2px;
 }
-#sidebar #buttons .add-page:hover img {
+#sidebar #buttons .add-btn:hover img {
   transform: scale(1.05);
 }
 
@@ -182,7 +233,7 @@ body {
   font-size: 14px;
   letter-spacing: -0.1px;
   font-weight: 400;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.2px;
   border: none;
   background: none;
   background-color: none;
