@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = 'styles.css' rel = 'stylesheet'>
+    <link href="node_modules/gridstack/dist/gridstack.min.css" rel="stylesheet"/>
+    <link href="node_modules/gridstack/dist/gridstack-extra.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+        <div id='main'></div>
+
+        <div id = 'nav'>
+            <div id = 'mast'>
+                <img src = 'assets/stan-leaf.svg'>
+                <input id = 'title' value = 'Stan Pages Demo'>
+            </div>
+
+            <div id = 'corner'>
+                <button id = 'publish' class = 'secondary'> Save As Draft </button>
+                <button id = 'publish' class = 'primary'> Publish </button>
+            </div>
+        </div>
+
+        <div id = 'sidebar'>
+
+            <div id = 'tabs'>
+
+
+
+            </div>
+
+
+            <div id = 'content'>
+                <h1> Layouts </h1>
+
+                <div id = 'buttons'>
+                    <div id = 'add-1' class = 'add-page'>
+                        <img src = 'assets/layout-1.png'>
+                        <p> Grid </p>
+                    </div>
+                    <div id = 'add-2' class = 'add-page'>
+                        <img src = 'assets/layout-2.png'>
+                        <p> Expo </p>
+                    </div>
+                    <div id = 'add-3' class = 'add-page'>
+                        <img src = 'assets/layout-3.png'>
+                        <p> Highlight </p>
+                    </div>
+                    <div id = 'add-4' class = 'add-page'>
+                        <img src = 'assets/layout-4.png'>
+                        <p> Stack </p>
+                    </div>
+                </div>
+
+                <button id="add-gridstack-btn" class="btn btn-primary">Add Gridstack</button>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+</body>
+<script src="node_modules/gridstack/dist/gridstack-all.js"></script>
+<script src = 'script2.js'></script>
+
+</html>
