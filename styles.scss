@@ -2,7 +2,7 @@
 body{
     font-family: 'Inter', sans-serif;
     margin: 0;
-    background: #f5f4ff;
+    background: #f9f9ff;
     background-image: linear-gradient(to left, black, rgba(#6355FF, 0)) !important;
 }
 
@@ -46,8 +46,6 @@ button{
 }
 
 .container {
-    //resize: horizontal;
-    //overflow-x: hidden;
 
     padding: 0;
     overflow-y: hidden;
@@ -121,15 +119,27 @@ button{
 
 
 
-
-    #screen{
+    #screen {
         resize: horizontal;
         overflow-x: hidden;
         flex-shrink: 0;
         min-width: 420px;
-    max-width: calc(100vw - 400px);
-    box-shadow: 0 50px 60px rgba(#020b3e, 0.15);
+        max-width: calc(100vw - 400px);
+        box-shadow: 0 50px 60px rgba(0, 2, 14, 0.15);
+        position: relative;
     }
+
+    #handle {
+        width: 10px;
+        cursor: ew-resize;
+        background-color: #6355FF;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+    }
+
 }
 
 #nav{

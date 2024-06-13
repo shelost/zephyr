@@ -253,5 +253,39 @@ document.addEventListener('DOMContentLoaded', function() {
         main.scrollTo({top: main.scrollHeight, left: 0, behavior: 'smooth'});
     });
 
-    console.log('Gridstack initialized and data loaded');
+
+
+
+    // Resize
+
+    let isResizing = false;
+    const handle = document.getElementById('handle');
+    const screen = document.getElementById('screen');
+    const main = document.getElementById('main');
+
+    handle.addEventListener('mousedown', function(e) {
+        isResizing = true;
+        document.addEventListener('mousemove', resizeScreen);
+        document.addEventListener('mouseup', stopResizing);
+    });
+
+    function resizeScreen(e) {
+        if (isResizing) {
+            const newWidth = e.clientX - document.getElementById('screen').getBoundingClientRect().width;
+
+            console.log(newWidth)
+
+
+            if (newWidth > 420 && newWidth < (window.innerWidth - 400)) {
+                screen.style.width = newWidth + 'px';
+
+            }
+        }
+    }
+
+    function stopResizing() {
+        isResizing = false;
+        document.removeEventListener('mousemove', resizeScreen);
+        document.removeEventListener('mouseup', stopResizing);
+    };
 });
